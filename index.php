@@ -29,6 +29,7 @@
                 <th>Telefono</th>
                 <th>Casa</th>
             </tr>
+            <tr>
             <tbody>
                 <?php 
                     $sql = "SELECT * FROM Integrantes";
@@ -38,14 +39,15 @@
                     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
                     foreach($stmt->fetchAll() as $row){
-                        echo"<t><td>".$row['Nombre'] ."</td>";
+                        echo"<tr><td>".$row['Nombre'] ."</td>";
                         echo "<td>".$row['Edad']."</td>";
                         echo "<td>".$row['Grupo']."</td>";
                         echo "<td>".$row['Telefono']."</td>";
                         echo "<td>".$row['Casa']."</td>";
-                        "</t>";
+                        "</tr>";
                     }
                 ?>
+            </tr>
             </tbody>
         </thead>
 
